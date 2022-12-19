@@ -2,7 +2,6 @@ FROM python:3.7-slim
 
 RUN apt-get update
 RUN apt-get -y install git jq
-RUN apk add --no-cache libc6-compat
 
 COPY duplicate_code_detection.py requirements.txt run_action.py entrypoint.sh /action/
 
