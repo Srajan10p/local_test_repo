@@ -2,7 +2,6 @@ FROM python:3.7-slim
 
 RUN apt-get update
 RUN apt-get -y install git jq
-RUN apk add --no-cache bash
 
 COPY duplicate_code_detection.py requirements.txt run_action.py entrypoint.sh /action/
 
@@ -11,3 +10,4 @@ RUN pip3 install -r /action/requirements.txt requests && \
     ln -s /root/nltk_data /usr/local/nltk_data 
 
 ENTRYPOINT ["/action/entrypoint.sh"]
+CMD ["/action/entrypoint.sh"]
