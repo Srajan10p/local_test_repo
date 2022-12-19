@@ -10,3 +10,4 @@ RUN pip3 install -r /action/requirements.txt requests && \
     ln -s /root/nltk_data /usr/local/nltk_data 
 
 ENTRYPOINT ["/action/entrypoint.sh"]
+CMD ["/entrypoint.sh"]
