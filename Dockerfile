@@ -9,4 +9,4 @@ RUN pip3 install -r /action/requirements.txt requests && \
     python3 -c "import nltk; nltk.download('punkt')" && \
     ln -s /root/nltk_data /usr/local/nltk_data 
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["local_test_repo/entrypoint.sh"]
